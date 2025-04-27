@@ -39,6 +39,16 @@ This tariff environment creates opportunities in sectors with limited internatio
   - **If Called**: 1.9% capital gain + 0.7% option premium + 1.7% dividend = 4.3% total return (75.0% annualized)
   - **If Not Called**: 0.7% option premium + 1.7% dividend = 2.4% total return (41.9% annualized)
 
+```mermaid
+graph LR
+    Start["EPD Covered Call<br>Initial Investment: $3,140"] --> StockDirection{"Stock Price at Expiration"}
+    StockDirection -->|"Above $32"| Called["Shares Called Away<br>$3,140 + $60 + $22 + $53<br>Total: $3,275 (+4.3%)"]
+    StockDirection -->|"Below $32"| NotCalled["Shares Retained<br>$3,140 + $22 + $53<br>Total: $3,215 (+2.4%)"]
+    style Start fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Called fill:#d4f7d4,stroke:#333,stroke-width:2px
+    style NotCalled fill:#d4e5f7,stroke:#333,stroke-width:2px
+```
+
 **Risk Assessment:**
 - **Dividend Security**: High dividend yield (6.8%) with strong cash flow coverage
 - **Upside Potential**: Limited to 1.9% above current price
@@ -66,6 +76,16 @@ This tariff environment creates opportunities in sectors with limited internatio
 - **Potential Outcomes**:
   - **If Called**: 4.0% capital gain + 2.6% option premium + 0.6% dividend = 7.2% total return (125.5% annualized)
   - **If Not Called**: 2.6% option premium + 0.6% dividend = 3.2% total return (55.8% annualized)
+
+```mermaid
+graph LR
+    Start["WFC Covered Call<br>Initial Investment: $6,973"] --> StockDirection{"Stock Price at Expiration"}
+    StockDirection -->|"Above $72.50"| Called["Shares Called Away<br>$6,973 + $277 + $185 + $42<br>Total: $7,477 (+7.2%)"]
+    StockDirection -->|"Below $72.50"| NotCalled["Shares Retained<br>$6,973 + $185 + $42<br>Total: $7,200 (+3.2%)"]
+    style Start fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Called fill:#d4f7d4,stroke:#333,stroke-width:2px
+    style NotCalled fill:#d4e5f7,stroke:#333,stroke-width:2px
+```
 
 **Risk Assessment:**
 - **Regulatory Environment**: Beneficial regulatory easing under current administration
@@ -95,6 +115,16 @@ This tariff environment creates opportunities in sectors with limited internatio
   - **If Called**: 0.5% capital gain + 1.8% option premium + 0.7% dividend = 3.0% total return (52.3% annualized)
   - **If Not Called**: 1.8% option premium + 0.7% dividend = 2.5% total return (43.6% annualized)
 
+```mermaid
+graph LR
+    Start["ETR Covered Call<br>Initial Investment: $8,461"] --> StockDirection{"Stock Price at Expiration"}
+    StockDirection -->|"Above $85"| Called["Shares Called Away<br>$8,461 + $39 + $150 + $59<br>Total: $8,709 (+3.0%)"]
+    StockDirection -->|"Below $85"| NotCalled["Shares Retained<br>$8,461 + $150 + $59<br>Total: $8,670 (+2.5%)"]
+    style Start fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Called fill:#d4f7d4,stroke:#333,stroke-width:2px
+    style NotCalled fill:#d4e5f7,stroke:#333,stroke-width:2px
+```
+
 **Risk Assessment:**
 - **Regulatory Stability**: Regulated business with predictable returns
 - **Upside Potential**: Limited but consistent with defensive positioning
@@ -121,11 +151,38 @@ Based on our analysis of options data and the research findings, we recommend th
    - Limited correlation with other positions enhances diversification
    - Regulated business model reduces earnings volatility
 
+```mermaid
+pie
+    title "Portfolio Allocation Strategy"
+    "EPD (Core Position)" : 40
+    "WFC (Growth Component)" : 35
+    "ETR (Defensive Component)" : 25
+```
+
 ### Expected Portfolio Performance
 - **Combined Dividend Yield**: 4.3%
 - **Average Option Premium Yield**: 1.7% per month
 - **Potential Monthly Return**: 3.0-5.5% (depending on assignment outcomes)
 - **Annualized Return Target**: 41.9%-125.5% range depending on scenarios
+
+```mermaid
+gantt
+    title Covered Call Strategy Timeline (April-May 2025)
+    dateFormat  YYYY-MM-DD
+    axisFormat %b %d
+    
+    section Entry
+    Stock Purchases           :2025-04-28, 1d
+    Option Sales              :2025-04-28, 1d
+    
+    section Dividends
+    EPD Ex-Dividend Date      :milestone, 2025-04-29, 0d
+    WFC/ETR Ex-Dividend Date  :milestone, 2025-05-02, 0d
+    
+    section Expiration
+    Option Expiration         :milestone, 2025-05-16, 0d
+    Assignment Evaluation     :2025-05-16, 1d
+```
 
 ## Execution Strategy
 
@@ -165,6 +222,22 @@ Based on our analysis of options data and the research findings, we recommend th
 4. **Sector-Specific Risks**
    - *Risk*: Regulatory changes or industry challenges
    - *Mitigation*: Portfolio diversification across three distinct sectors
+
+```mermaid
+flowchart TD
+    A["Risk Management Process"] --> B["Monitor Daily Stock Prices<br>vs. Strike Prices"]
+    B --> C{"Stock Drops >5%<br>From Entry?"}
+    C -->|Yes| D["Consider Closing<br>Position"]
+    C -->|No| E{"Stock Rises >2%<br>Above Strike?"}
+    E -->|Yes| F["Evaluate Rolling<br>Options Higher"]
+    E -->|No| G["Continue Holding<br>No Action Required"]
+    G --> H{"Approaching<br>Ex-Dividend Date?"}
+    H -->|Yes| I["Monitor Closely for<br>Early Assignment Risk"]
+    H -->|No| J["Review Again<br>Next Trading Day"]
+    I --> J
+    F --> J
+    D --> K["Re-evaluate Entry<br>Opportunity"]
+```
 
 ## Conclusion
 
