@@ -1,5 +1,22 @@
 # Covered Call Analysis - April 26, 2025
 
+## Table of Contents
+- [Overview](#overview)
+- [Current Market Context](#current-market-context)
+- [Stock Analysis](#stock-analysis)
+  - [Enterprise Products Partners (EPD)](#enterprise-products-partners-epd)
+  - [Wells Fargo (WFC)](#wells-fargo-wfc)
+  - [Entergy Corp (ETR)](#entergy-corp-etr)
+- [Portfolio Allocation Strategy](#portfolio-allocation-strategy)
+  - [Recommended Allocation](#recommended-allocation)
+  - [Expected Portfolio Performance](#expected-portfolio-performance)
+- [Execution Strategy](#execution-strategy)
+  - [Entry Recommendations](#entry-recommendations)
+  - [Management Guidelines](#management-guidelines)
+- [Risk Management](#risk-management)
+  - [Identified Risks and Mitigation](#identified-risks-and-mitigation)
+- [Conclusion](#conclusion)
+
 ## Overview
 
 This document presents an in-depth analysis of covered call opportunities for the three stocks identified in our research (EPD, WFC, and ETR), with a specific focus on the May 16, 2025 expiration date as recommended in the research findings. Our analysis leverages real-time options data along with the research projections to validate and refine the covered call strategy.
